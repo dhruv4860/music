@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.15)),url("Images/Background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: sticky;
+    background-attachment: fixed;
+  }
+
+  nav {
+    width: 100%;
+    height: 15vh;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  nav .logo {
+    width: 25%;
+    text-align: center;
+  }
+  
+  nav .menu {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav .menu a {
+    width: 25%;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  nav .menu a:nth-child(3){
+    color: #fbff00;
+  }
+  
+  .menu a:hover,
+  .menu a:active{
+    color: #fbff00;
+  }
+
+/* about section */
+  section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 82vh;
+    width: 85vw;
+    margin: 12px auto;
+}
+.image{
+    background: url("Images/logo.jpg") center/cover no-repeat;
+}
+.content{
+    background: rgb(255, 155, 83);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.content h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+.content span{
+    height: 0.5px;
+    width: 80px;
+    background: black;
+    margin: 30px 0;
+}
+.content p{
+    padding-bottom: 15px;
+    font-weight: 500;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: black;
+
+}
+.links{
+    margin: 15px 0;
+}
+.links li{
+    border: 0.5px solid black;
+    list-style: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 160px;
+    text-align: center;
+    font-weight: 530;
+}
+.links li a{
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+}
+.links li:hover{
+    border-color: #fbff00;
+}
+.links li:hover a{
+    color :#fbff00;
+}
+.vertical-line{
+    height: 30px;
+    width: 0.5px;
+    background: black;
+    margin: 0 auto;
+}
+
+@media(max-width: 992px){
+    section{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .image{
+        height: 100vh;
+    }
+    .content{
+        height: 100vh;
+    }
+    .content h2{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .content span{
+        margin: 20px 0;
+    }
+    .content p{
+        font-size: 14px;
+    }
+    .links li a{
+        font-size: 14px;
+    }
+    .links{
+        margin: 5px 0;
+    }
+    .links li{
+        padding: 6px 10px;
+    }
+    .icons li i{
+        font-size: 15px;
+    }
+}
+
+
+
+/* footer   */
+
+
+  .foot-panel1{
+    background-color: #37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+
+  .top-button{
+    background: #37475a;
+    color: #ffffff;
+    text-decoration: solid;
+    
+  }
+  
+  .top-button:hover {
+    color: yellow;
+    text-decoration: solid;
+  }
+  
+  .foot-panel2{
+    background-color: #222f3d;
+    color: white;
+    height: 250px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  ul{
+    margin-top: 20px;
+  
+  }
+  
+  ul a{
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #dddddd;
+  }
+  
+  .foot-panel3 {
+    background-color: #222f3d;
+    border-top: 0.5px solid white;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5px solid white;
+  }
+  
+  .logo1 {
+    background-image: url(Images/logo.jpg);
+    background-size: contain;
+    height: 100px;
+    width: 1000px;
+    background-repeat: no-repeat;
+    margin-left: 700px;
+  }
+  
+  .foot-panel4 {
+    background-color: #37475a;
+    color: white;
+    height: 80px;
+  }
+  
+  .pages {
+    font-size: 0.7rem;
+    text-align: center;
+    padding-top: 25px;
+  }
+  
+  .copyright {
+    font-size: 0.7rem;
+    text-align: center;
+    padding-top: 5px;
+  }

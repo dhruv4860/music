@@ -1,0 +1,50 @@
+<?php
+// Database connection settings
+$servername = "localhost";  // Change if your database server is remote
+$username = "root";         // MySQL username
+$password = "";             // MySQL password
+$dbname = "login_db";       // Database name
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Get form data from signup page
+$fullName = $_POST['fullName'];
+$email = $_POST['email'];
+$pass = $_POST['pass'];
+$confirmPass = $_POST['confirmPass'];
+
+// Input validation: Check if passwords match
+if ($pass != $confirmPass) {
+    die("Passwords do not match.");
+}
+
+// Check if email already exists
+$sql = "SELECT * FROM users WHERE email='$email'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    die("This email is already registered.");
+}
+
+// Hash the password for security
+$hashed_password = password_hash($pass, PASSWORD_DEFAULT);
+
+// Insert user data into the database
+$sql = "INSERT INTO users (name, email, password) VALUES ('$fullName', '$email', '$hashed_password')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Registration successful! You can now log in.";
+    // Redirect to login page, e.g., header('Location: login.php');
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+// Close the connection
+$conn->close();
+?>

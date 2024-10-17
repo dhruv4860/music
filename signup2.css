@@ -1,0 +1,147 @@
+
+
+
+
+
+
+/* style2.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url(Images/Back.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-color: #f4f4f4; */
+}
+
+.registration-container {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background:transparent;
+    border: 2px solid aquamarine;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    /* display: flex; */
+    justify-content: center;
+    text-align: center;
+    
+    /* padding: 30px; */
+    /* width: 350px;
+    border-radius: 8px; */
+     
+}
+
+.registration-container .from-box{
+    width: 100%;
+    padding: 40px;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color:aquamarine;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid white;
+    margin: 20px 0;
+    /* margin-bottom: 20px; */
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: aquamarine;
+    font-weight: 600;
+   
+    /* transition: 0.3s; */
+    padding: 0 35px 0 5px;
+}
+
+.input-box label {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: aquamarine;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+}
+
+/* .input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    top: 5px;
+    left: 8px;
+    font-size: 12px;
+    color: #333;
+} */
+
+.btn {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    background: aquamarine;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+    /* transition: 0.3s; */
+}
+
+/* .btn:hover {
+    background-color: white;
+} */
+
+.login {
+    font-size: .9em;
+    color: blanchedalmond;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-link {
+    color: blanchedalmond;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login  a {
+    color: blanchedalmond;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
